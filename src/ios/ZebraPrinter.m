@@ -1,4 +1,4 @@
-#import "CordovaZebraPrinterPlugin.h"
+#import "ZebraPrinter.h"
 
 @implementation CordovaZebraPrinterPlugin
 
