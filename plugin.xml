@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="tr.com.aphel.cordova.plugin.zebraprinter" version="1.0.0">
+
+    <name>Cordova Zebra Printer Plugin</name>
+
+    <engines>
+        <engine name="cordova" version=">=6.0.0"/>
+    </engines>
+
+    <asset src="www/index.js" target="js/index.js"/>
+
+    <js-module src="www/index.js" name="index">
+        <clobbers target="index"/>
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaZebraPrinterPlugin">
+                <param name="android-package" value="tr.com.aphel.cordova.plugin.ZebraPrinter"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CordovaZebraPrinterPlugin.java" target-dir="src/com/zebraprinter/plugin/"/>
+    </platform>
+
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/widget">
+            <feature name="CordovaZebraPrinterPlugin">
+                <param name="ios-package" value="CordovaZebraPrinterPlugin"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CordovaZebraPrinterPlugin.h" target-dir="CordovaZebraPrinterPlugin"/>
+        <source-file src="src/ios/CordovaZebraPrinterPlugin.m" target-dir="CordovaZebraPrinterPlugin"/>
+    </platform>
+
+</plugin>
