@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="tr.com.aphel.cordova.plugin.zebraprinter" version="1.0.0">
 
-    <name>Cordova Zebra Printer Plugin</name>
+    <name>ZebraPrinter</name>
 
     <engines>
         <engine name="cordova" version=">=6.0.0"/>
@@ -9,8 +9,8 @@
 
     <asset src="www/index.js" target="js/index.js"/>
 
-    <js-module src="www/index.js" name="index">
-        <clobbers target="index"/>
+    <js-module src="www/index.js" name="ZebraPrinter">
+        <clobbers target="cordova.plugins.zebraprinter" />
     </js-module>
 
     <platform name="android">
