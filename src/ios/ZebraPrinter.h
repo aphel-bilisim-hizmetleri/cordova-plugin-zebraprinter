@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface CordovaZebraPrinterPlugin : CDVPlugin
+@interface ZebraPrinter : CDVPlugin
 
 - (void) print:(CDVInvokedUrlCommand*)command;
 

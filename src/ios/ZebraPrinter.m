@@ -1,6 +1,6 @@
 #import "ZebraPrinter.h"
 
-@implementation CordovaZebraPrinterPlugin
+@implementation ZebraPrinter
 
 - (void)print:(CDVInvokedUrlCommand*)command
 {
