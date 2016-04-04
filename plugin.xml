@@ -16,7 +16,7 @@
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="CordovaZebraPrinterPlugin">
+            <feature name="ZebraPrinter">
                 <param name="android-package" value="tr.com.aphel.cordova.plugin.ZebraPrinter"/>
             </feature>
         </config-file>
@@ -27,13 +27,13 @@
     <platform name="ios">
 
         <config-file target="config.xml" parent="/widget">
-            <feature name="CordovaZebraPrinterPlugin">
-                <param name="ios-package" value="CordovaZebraPrinterPlugin"/>
+            <feature name="ZebraPrinter">
+                <param name="ios-package" value="ZebraPrinter"/>
             </feature>
         </config-file>
 
-        <header-file src="src/ios/ZebraPrinter.h" target-dir="CordovaZebraPrinterPlugin"/>
-        <source-file src="src/ios/ZebraPrinter.m" target-dir="CordovaZebraPrinterPlugin"/>
+        <header-file src="src/ios/ZebraPrinter.h" target-dir="ZebraPrinter"/>
+        <source-file src="src/ios/ZebraPrinter.m" target-dir="ZebraPrinter"/>
     </platform>
 
 </plugin>
