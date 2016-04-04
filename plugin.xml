@@ -21,7 +21,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/CordovaZebraPrinterPlugin.java" target-dir="src/com/zebraprinter/plugin/"/>
+        <source-file src="src/android/ZebraPrinter.java" target-dir="src/com/zebraprinter/plugin/"/>
     </platform>
 
     <platform name="ios">
@@ -32,8 +32,8 @@
             </feature>
         </config-file>
 
-        <header-file src="src/ios/CordovaZebraPrinterPlugin.h" target-dir="CordovaZebraPrinterPlugin"/>
-        <source-file src="src/ios/CordovaZebraPrinterPlugin.m" target-dir="CordovaZebraPrinterPlugin"/>
+        <header-file src="src/ios/ZebraPrinter.h" target-dir="CordovaZebraPrinterPlugin"/>
+        <source-file src="src/ios/ZebraPrinter.m" target-dir="CordovaZebraPrinterPlugin"/>
     </platform>
 
 </plugin>
