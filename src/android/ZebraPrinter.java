@@ -18,9 +18,8 @@ public class ZebraPrinter extends CordovaPlugin {
             return true;
 
         } else {
-
+            
             return false;
-
         }
     }
 }

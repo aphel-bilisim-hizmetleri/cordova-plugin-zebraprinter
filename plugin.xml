@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="tr.com.aphel.cordova.plugin.zebraprinter" version="1.0.0">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="tr.com.aphel.cordova.plugin.zebraprinter"
+        version="0.7.0">
 
-    <name>ZebraPrinter</name>
+  <name>Zebra Printer</name>
 
-    <engines>
-        <engine name="cordova" version=">=6.0.0"/>
-    </engines>
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
 
-    <asset src="www/index.js" target="js/index.js"/>
+  <asset src="www/index.js" target="js/zebraprinter.js"/>
 
-    <js-module src="www/index.js" name="ZebraPrinter">
-        <clobbers target="cordova.plugins.zebraprinter" />
-    </js-module>
+  <js-module src="www/index.js" name="zebraprinter">
+    <clobbers target="zebraprinter" />
+  </js-module>
 
-    <platform name="android">
+  <platform name="android">
 
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="ZebraPrinter">
-                <param name="android-package" value="tr.com.aphel.cordova.plugin.ZebraPrinter"/>
-            </feature>
-        </config-file>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ZebraPrinter">
+        <param name="android-package" value="tr.com.aphel.cordova.plugin.ZebraPrinter"/>
+      </feature>
+    </config-file>
 
-        <source-file src="src/android/ZebraPrinter.java" target-dir="src/com/zebraprinter/plugin/"/>
-    </platform>
+    <source-file src="src/android/ZebraPrinter.java" target-dir="src/com/example/plugin/"/>
+  </platform>
 
-    <platform name="ios">
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="ZebraPrinter">
+        <param name="ios-package" value="ZebraPrinter" />
+      </feature>
+    </config-file>
 
-        <config-file target="config.xml" parent="/widget">
-            <feature name="ZebraPrinter">
-                <param name="ios-package" value="ZebraPrinter"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/ZebraPrinter.h" target-dir="ZebraPrinter"/>
-        <source-file src="src/ios/ZebraPrinter.m" target-dir="ZebraPrinter"/>
-    </platform>
+    <header-file src="src/ios/ZebraPrinter.h" target-dir="ZebraPrinterPlugin"/>
+    <source-file src="src/ios/ZebraPrinter.m" target-dir="ZebraPrinterPlugin"/>
+  </platform>
 
 </plugin>
