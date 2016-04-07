@@ -1,7 +1,7 @@
 /*global cordova, module*/
 
 module.exports = {
-    print: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "ZebraPrinter", "print", [name]);
+    print: function (content, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "ZebraPrinterPlugin", "print", [content]);
     }
 };
